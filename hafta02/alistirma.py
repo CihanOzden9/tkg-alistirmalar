@@ -29,8 +29,8 @@ def donem_notu(vize, final):
 # Büyük/küçük harf ayrımı yapın: "A" ile "a" farklı harflerdir.
 # Örnek: harf_say("merhaba", "a") -> 2
 def harf_say(metin, harf):
-    result = metin.count(harf)
-
+    metin = list(metin)
+    return metin.count(harf)
 
 # 4. Faktöriyel
 # n! = 1 * 2 * 3 * ... * n değerini bir döngüyle hesaplayın. 0! = 1'dir.
