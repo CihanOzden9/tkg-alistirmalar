@@ -40,11 +40,10 @@ def faktoriyel(n):
         return 1
     elif n < 0:
         n *= -1
-    result = 0
+    result = 1
     for i in range(1,n+1):
-        result *= i
+        result = result * i
     return result
-
 
 # 5. Geçenler
 # Nottan 60 ve üzeri olanları, sıralarını bozmadan yeni bir liste olarak döndürün.
