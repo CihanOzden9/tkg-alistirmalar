@@ -1,8 +1,15 @@
 # TKG alıştırmaları
 
 Dönem boyunca her hafta bu repoya yeni bir klasör eklenecek: `hafta02/`, `hafta03/`, ...
-Her klasörde o haftanın alıştırması ve onu kontrol eden testler var (ör. `alistirma.py` ve `test_alistirma.py`).
+Her klasörde o haftanın alıştırması ve onu kontrol eden testler var.
 Her `push` yaptığınızda GitHub Actions testleri sizin yerinize çalıştırır.
+
+| Hafta | Konu | Düzenleyeceğiniz dosya |
+|---|---|---|
+| [hafta02](hafta02/) | Python temelleri: fonksiyonları siz yazın | `alistirma.py` |
+| [hafta03](hafta03/) | pytest: testleri siz yazın | `test_alistirma.py` |
+| [hafta04](hafta04/) | Lab: Python ve test karma alıştırma | `bolum1.py`, `test_bolum2.py` |
+| [hafta05](hafta05/) | Kapsam ve parametrize: testleri siz yazın | `test_alistirma.py` |
 
 ## Dönem başında bir kez
 
@@ -26,17 +33,19 @@ Her `push` yaptığınızda GitHub Actions testleri sizin yerinize çalıştır�
    git pull
    ```
    Yeni `haftaNN/` klasörü gelir.
-2. **Alıştırmayı yapın.** O haftanın klasörüne girip `alistirma.py` dosyasındaki fonksiyonları doldurun.
+2. **Alıştırmayı yapın.** O haftanın klasörüne girip yukarıdaki tabloda yazan dosyayı düzenleyin.
    Kendi bilgisayarınızda deneyin:
    ```bash
-   cd hafta02
+   cd hafta04
    python -m pip install pytest
    python -m pytest -v
    ```
+   Klasörde `requirements.txt` varsa o haftanın ek paketlerini de kurun:
+   `python -m pip install -r requirements.txt`
 3. **Commit'leyip gönderin.**
    ```bash
-   git add alistirma.py
-   git commit -m "hafta02 alıştırması"
+   git add .
+   git commit -m "hafta04 alıştırması"
    git push
    ```
 4. **Sonucu görün.** Fork'unuzun **Actions** sekmesinde her hafta ayrı bir satırdır.
@@ -45,7 +54,8 @@ Her `push` yaptığınızda GitHub Actions testleri sizin yerinize çalıştır�
 
 ## Kurallar
 
-- `test_alistirma.py` dosyalarını ve `.github/` klasörünü **değiştirmeyin**.
+- Her hafta yalnızca tabloda yazan dosyayı değiştirin.
+- `.github/` klasörünü **değiştirmeyin**.
 
 ## Sık karşılaşılan sorunlar
 
